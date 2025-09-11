@@ -12,7 +12,7 @@
  *
  * @param {number} start - The first number of an array.
  * @param {number} end - The last number of an array.
- * @return {array} - An array of integers.
+ * @return {number[]} - An array of integers.
  *
  * @example
  *    getIntervalArray(1, 5)  => [ 1, 2, 3, 4, 5 ]
@@ -28,9 +28,9 @@ function getIntervalArray(/* start, end */) {
  * Returns a new array where each element is the sum of the corresponding elements
  * from two arrays. Arrays can have different lengths.
  *
- * @param {array} arr1 - The first array.
- * @param {array} arr2 - The second array.
- * @return {array} - An array containing the sum of corresponding elements.
+ * @param {number[]} arr1 - The first array.
+ * @param {number[]} arr2 - The second array.
+ * @return {number[]} - An array containing the sum of corresponding elements.
  *
  * @example
  *    sumArrays([1, 2, 3], [4, 5, 6]) => [5, 7, 9]
@@ -44,7 +44,7 @@ function sumArrays(/* arr1, arr2 */) {
 /**
  * Returns an index of the specified element in array or -1 if element is not found.
  *
- * @param {array} arr - The input array.
+ * @param {any[]} arr - The input array.
  * @param {any} value - Element to search.
  * @return {number} - An index of the specified element.
  *
@@ -60,7 +60,7 @@ function findElement(/* arr, value */) {
 /**
  * Returns a number of all occurrences of the specified item in an array.
  *
- * @param {array} arr - The input array.
+ * @param {any[]} arr - The input array.
  * @param {any} item - Element to search.
  * @return {number} - Number of found items.
  *
@@ -79,8 +79,8 @@ function findAllOccurrences(/* arr, item */) {
  * Removes falsy values from the specified array.
  * Falsy values: false, null, 0, "", undefined, and NaN.
  *
- * @param {array} arr - The input array.
- * @return {array} - The array without falsy values.
+ * @param {any[]} arr - The input array.
+ * @return {any[]} - The array without falsy values.
  *
  * @example
  *    removeFalsyValues([ 0, false, 'cat', NaN, true, '' ]) => [ 'cat', true ]
@@ -94,8 +94,8 @@ function removeFalsyValues(/* arr */) {
 /**
  * Returns an array containing the lengths of each string in a specified array of strings.
  *
- * @param {array} arr - The input array.
- * @return {array} - The array of string lengths.
+ * @param {string[]} arr - The input array.
+ * @return {number[]} - The array of string lengths.
  *
  * @example
  *    getStringsLength([ '', 'a', 'bc', 'def', 'ghij' ]) => [ 0, 1, 2, 3, 4 ]
@@ -109,7 +109,7 @@ function getStringsLength(/* arr */) {
  * Returns the average of all items in the specified array of numbers.
  * The result should be rounded to two decimal places.
  *
- * @param {array} arr - The input array
+ * @param {number[]} arr - The input array
  * @return {number} - The average of all items
  *
  * @example
@@ -126,7 +126,7 @@ function getAverage(/* arr */) {
 /**
  * Checks if all strings in an array have the same length.
  *
- * @param {array} arr - The array of strings to be checked.
+ * @param {string[]} arr - The array of strings to be checked.
  * @return {boolean} - True if all strings have the same length, false otherwise.
  *
  * @example
@@ -140,7 +140,7 @@ function isSameLength(/* arr */) {
 /**
  * Checks if there are elements in the array where the value is equal to its index.
  *
- * @param {array} arr - The array of elements to be checked.
+ * @param {number[]} arr - The array of elements to be checked.
  * @return {boolean} - True if there are elements with value equal to their index, false otherwise.
  *
  * @example
@@ -155,9 +155,10 @@ function isValueEqualsIndex(/* arr */) {
 /**
  * Inserts the item into specified array at specified index.
  *
- * @param {array} arr - The input array.
+ * @param {any[]} arr - The input array.
  * @param {any} item - The item to insert.
  * @param {number} index - Specified index.
+ * @return {any[]}
  *
  * @example
  *    insertItem([ 1, 3, 4, 5 ], 2, 1)  => [ 1, 2, 3, 4, 5 ]
@@ -170,8 +171,9 @@ function insertItem(/* arr, item, index */) {
 /**
  * Returns the n first items of the specified array.
  *
- * @param {array} arr - The input array.
+ * @param {any[]} arr - The input array.
  * @param {number} n - Number of items.
+ * @return {any[]}
  *
  * @example
  *    getHead([ 1, 3, 4, 5 ], 2) => [ 1, 3 ]
@@ -185,8 +187,9 @@ function getHead(/* arr, n */) {
 /**
  * Returns the n last items of the specified array.
  *
- * @param {array} arr - The input array.
+ * @param {any[]} arr - The input array.
  * @param {number} n - Number of items.
+ * @return {any[]}
  *
  * @example
  *    getTail([ 1, 3, 4, 5 ], 2) => [ 4, 5 ]
@@ -201,8 +204,8 @@ function getTail(/* arr, n */) {
  * Returns the doubled array - elements of the specified array
  * are repeated twice using original order.
  *
- * @param {array} arr - The input array.
- * @return {array} - The doubled array.
+ * @param {any[]} arr - The input array.
+ * @return {any[]} - The doubled array.
  *
  * @example
  *    doubleArray(['Ace', 10, true])  => ['Ace', 10, true, 'Ace', 10, true]
@@ -216,7 +219,7 @@ function doubleArray(/* arr */) {
 /**
  * Concatenates all elements from specified array into single string with ',' delimiter.
  *
- * @param {array} arr - The input array.
+ * @param {any[]} arr - The input array.
  * @return {string} - The concatenated string.
  *
  * @example
@@ -231,8 +234,8 @@ function toStringList(/* arr */) {
 /**
  * Returns array containing only unique values from the specified array.
  *
- * @param {array} arr - The input array.
- * @return {array} - The array with unique values.
+ * @param {any[]} arr - The input array.
+ * @return {any[]} - The array with unique values.
  *
  * @example
  *   distinct([ 1, 2, 3, 3, 2, 1 ]) => [ 1, 2, 3 ]
@@ -249,7 +252,7 @@ function distinct(/* arr */) {
  *
  * @param {number} n - Depth of outter array (n > 0).
  * @param {number} size - Length of all arrays (size > 0).
- * @return {array} - The n-dimensional array filled with zeros.
+ * @return {any[]} - The n-dimensional array filled with zeros.
  *
  * @example
  *    createNDimensionalArray(2, 3) => [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
@@ -264,8 +267,8 @@ function createNDimensionalArray(/* n, size */) {
 /**
  * Flattens a nested array into a single-level array.
  *
- * @param {array} nestedArray - The nested array to be flattened.
- * @return {array} - A single-level array.
+ * @param {any[]} nestedArray - The nested array to be flattened.
+ * @return {any[]} - A single-level array.
  *
  * @example
  *    flattenArray([1, [2, [3, 4], 5], 6]) => [1, 2, 3, 4, 5, 6]
@@ -280,10 +283,10 @@ function flattenArray(/* nestedArray */) {
  * Projects each element of the specified array to a sequence
  * and flattens the resulting sequences into one array.
  *
- * @param {array} arr - The input array
+ * @param {any[]} arr - The input array
  * @param {Function} childrenSelector - A transform function to apply to each element
  *                                     that returns an array of children
- * @return {array} - The flatted array
+ * @return {any[]} - The flatted array
  *
  * @example
  *   selectMany([[1, 2], [3, 4], [5, 6]], (x) => x) =>   [ 1, 2, 3, 4, 5, 6 ]
@@ -298,7 +301,7 @@ function selectMany(/* arr, childrenSelector */) {
  * Expenses may be greater than income.
  * You need to calculate the final balance.
  *
- * @param {array} arr - The input array [[income, expence], ...]
+ * @param {number[][]} arr - The input array [[income, expence], ...]
  * @return {number} - The final balance.
  *
  * @example
@@ -313,9 +316,9 @@ function calculateBalance(/* arr */) {
 /**
  * Breaks an array into chunks of the specified size.
  *
- * @param {array} arr - The array to be broken into chunks.
+ * @param {any[]} arr - The array to be broken into chunks.
  * @param {number} chunkSize - The size of each chunk.
- * @return {array} - An array of chunks.
+ * @return {any[]} - An array of chunks.
  *
  * @example
  *    createChunks([1, 2, 3, 4, 5, 6, 7], 3) => [[1, 2, 3], [4, 5, 6], [7]]
@@ -330,7 +333,7 @@ function createChunks(/* arr, chunkSize */) {
  * Generates an array of odd numbers of the specified length.
  *
  * @param {number} len - The length of an array.
- * @return {array} - An array of odd numbers.
+ * @return {number[]} - An array of odd numbers.
  *
  * @example
  *    generateOdds(0) => []
@@ -345,8 +348,8 @@ function generateOdds(/* len */) {
 /**
  * Returns an element from the multidimensional array by the specified indices.
  *
- * @param {array} arr - The input multidimensional array
- * @param {array} indices - The array of indices
+ * @param {any[]} arr - The input multidimensional array
+ * @param {number[]} indices - The array of indices
  * @return {any} - An element from the array
  *
  * @example
@@ -361,7 +364,7 @@ function getElementByIndices(/* arr, indices */) {
 /**
  * Returns the number of all falsy values in the specified array.
  *
- * @param {array} arr - The input array.
+ * @param {any[]} arr - The input array.
  * @return {number} - The number of all falsy values.
  *
  * @example
@@ -378,7 +381,7 @@ function getFalsyValuesCount(/* arr */) {
  * Creates an identity matrix of the specified size.
  *
  * @param {number} n - A size of the matrix.
- * @return {array} - An identity matrix.
+ * @return {number[][]} - An identity matrix.
  *
  * @example
  *     getIdentityMatrix(1)  => [[1]]
@@ -399,8 +402,8 @@ function getIdentityMatrix(/* n */) {
 /**
  * Returns an array containing indices of odd elements in the input array.
  *
- * @param {array} numbers - The array of numbers.
- * @return {array} - An array containing indices of odd elements.
+ * @param {number[]} numbers - The array of numbers.
+ * @return {number[]} - An array containing indices of odd elements.
  *
  * @example
  *    getIndicesOfOddNumbers([1, 2, 3, 4, 5]) => [0, 2, 4]
@@ -414,8 +417,8 @@ function getIndicesOfOddNumbers(/* numbers */) {
 /**
  * Returns the array of RGB Hex strings from the specified array of numbers.
  *
- * @param {array} arr - The input array.
- * @return {array} - The array of RGB Hex strings.
+ * @param {number[]} arr - The input array.
+ * @return {string[]} - The array of RGB Hex strings.
  *
  * @example
  *    getHexRGBValues([ 0, 255, 16777215]) => [ '#000000', '#0000FF', '#FFFFFF' ]
@@ -428,9 +431,9 @@ function getHexRGBValues(/* arr */) {
 /**
  * Returns the n largest values from the specified array
  *
- * @param {array} arr - The input array
+ * @param {number[]} arr - The input array
  * @param {number} n - Number of maximum values.
- * @return {array} - n largest values.
+ * @return {number[]} - n largest values.
  *
  * @example
  *   getMaxItems([], 5) => []
@@ -446,9 +449,9 @@ function getMaxItems(/* arr, n */) {
 /**
  * Finds and returns an array containing only the common elements found in two arrays.
  *
- * @param {array} arr1 - The first array.
- * @param {array} arr2 - The second array.
- * @return {array} - An array containing common elements.
+ * @param {any[]} arr1 - The first array.
+ * @param {any[]} arr2 - The second array.
+ * @return {any[]} - An array containing common elements.
  *
  * @example
  *    findCommonElements([1, 2, 3], [2, 3, 4]) => [ 2, 3 ]
@@ -462,7 +465,7 @@ function findCommonElements(/* arr1, arr2 */) {
 /**
  * Finds the length of the longest increasing and uninterrupted subsequence of a given array of integers.
  *
- * @param {array} nums - The array of integers.
+ * @param {number[]} nums - The array of integers.
  * @return {number} - The length of the longest increasing subsequence.
  *
  * @example
@@ -478,8 +481,8 @@ function findLongestIncreasingSubsequence(/* nums */) {
  * Propagates every item in sequence its position times
  * Returns an array that consists of: one first item, two second items, three third items etc.
  *
- * @param {array} arr - The input array
- * @return {array}
+ * @param {any[]} arr - The input array
+ * @return {any[]}
  *
  * @example :
  *  propagateItemsByPositionIndex([]) => []
@@ -496,9 +499,9 @@ function propagateItemsByPositionIndex(/* arr */) {
  * Shifts an array by n positions. If n is negative, the array is shifted to the left;
  * if positive, it is shifted to the right.
  *
- * @param {array} arr - The array to be shifted.
+ * @param {any[]} arr - The array to be shifted.
  * @param {number} n - The number of positions to shift the array elements.
- * @return {array} - The shifted array.
+ * @return {any[]} - The shifted array.
  *
  * @example
  *    shiftArray([1, 2, 3, 4, 5], 2) => [4, 5, 1, 2, 3]
@@ -512,8 +515,8 @@ function shiftArray(/* arr, n */) {
 /**
  * Sorts digit names.
  *
- * @param {array} arr - The input array.
- * @return {array} - Sorted array.
+ * @param {string[]} arr - The input array.
+ * @return {string[]} - Sorted array.
  *
  * @example
  *   sortDigitNamesByNumericOrder([]) => []
@@ -531,8 +534,8 @@ function sortDigitNamesByNumericOrder(/* arr */) {
  * the head (first half) of array move to the end, the tail (last half) move to the start.
  * The middle element (if exists) leave on the same position. *
  *
- * @param {array} arr - The input array.
- * @return {array} - The swapped array.
+ * @param {any[]} arr - The input array.
+ * @return {any[]} - The swapped array.
  *
  * @example
  *   [ 1, 2, 3, 4, 5 ]   =>  [ 4, 5, 3, 1, 2 ]
